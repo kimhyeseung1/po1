@@ -1,0 +1,38 @@
+@charset "utf-8";
+.wrapper{
+    margin-top: 100px auto;
+    width:600px;
+    height:400px;
+    background-color: rgb(89, 0, 255);
+}
+.box{
+    padding: 50px;
+
+}
+.box p{
+    color:#aaa;
+    margin-bottom: 10px;
+}
+.box p:hover{
+    color: white;
+}
+.box span{
+    font-weight: 700;
+    color: white;
+    position: relative;
+}
+.box span::after{
+    content: "";
+    display: block;
+    width: 0;
+    height: 5px;
+    background-color: aquamarine;
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    background: rgba(220, 125, 125, 0.6);
+}
+.box p:hover span::after{
+    width:100%;
+    transition: width 0.3s;
+}
